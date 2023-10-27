@@ -24,7 +24,7 @@ module.exports.signin = async (req, res, next) => {
         if (match) {
             // *****************************************************
             // let token = generateToken({ name: user.name, role: user.role, userId: user._id })
-            let token = jwt.sign({ name: user.name, role: user.role, userId: user._id }, 'SKEY')
+            let token = jwt.sign({ name: user.name, role: user.role,email: user.email,  userId: user._id }, 'SKEY')
             // *****************************************************
             res.json({ message: "Success Signin", token })
         } else {
