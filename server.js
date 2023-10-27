@@ -17,6 +17,7 @@ app.use('/api/v1/auth', require('./src/moduels/auth/auth.api'))
 app.use('/api/v1/plants', require('./src/moduels/plants/plant.api'))
 app.use('/api/v1/wishList', require('./src/moduels/wishlist/wishlist.api'))
 app.use('/api/v1/profile', require('./src/moduels/profile/profile.api'))
+app.use('/api/v1/nursery', require('./src/moduels/nursery/nursery.api'))
 
 app.all('*',(req,res , next)=>{
     // res.json({message:`Can't find this route : ${req.originalUrl}` })
